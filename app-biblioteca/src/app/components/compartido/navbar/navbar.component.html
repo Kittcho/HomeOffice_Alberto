@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-boots">
+    <a class="navbar-brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/MediaWiki-Virtual-Library-icon.svg/664px-MediaWiki-Virtual-Library-icon.svg.png" width="45" height="35" class="d-inline-block align-top" alt="logo_biblioteca"> Biblioteca
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" [routerLink]="['libros']">Libros <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" [routerLink]="['usuarios']">Usuarios</a>
+        </div>
+    </div>
+</nav>
