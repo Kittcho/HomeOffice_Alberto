@@ -9,11 +9,13 @@ import { LibrosService } from '../../servicios/libros.service';
 export class ListaLibrosComponent implements OnInit {
 
   listaLibros: any[];
+  tipoBusqueda: string;
   constructor( private librosServices: LibrosService ) {
     this.listaLibros = librosServices.getLibros();
   }
 
   ngOnInit(): void {
+    this.tipoBusqueda = 'Titulo';
   }
 
 }

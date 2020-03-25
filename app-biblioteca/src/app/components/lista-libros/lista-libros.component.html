@@ -1,3 +1,26 @@
-<p>lista-libros works!</p>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="inputTitulo" [placeholder]="'Buscar por ' + tipoBusqueda">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputState">Tipo busqueda</label>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control" (change)="tipoBusqueda = cbBusqueda.value" #cbBusqueda>
+                          <option selected>Titulo</option>
+                          <option>Autor</option>
+                          <option>Genero</option>
+                          <option>Editorial</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 
-<app-libro [libros]="listaLibros"></app-libro>
+<div class="container">
+    <app-libro [libros]="listaLibros"></app-libro>
+</div>

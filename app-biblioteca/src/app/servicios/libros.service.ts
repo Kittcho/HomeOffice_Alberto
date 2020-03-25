@@ -110,7 +110,9 @@ export class LibrosService {
           'Novela contemporánea',
           'General Novela'
         ],
-        autor: ['Paloma Sánchez-Garnica'],
+        autor: [
+          'Paloma Sánchez'
+        ],
         anio: 2020,
         num_existencia: 2,
         num_stock: 2,
@@ -143,10 +145,11 @@ export class LibrosService {
           'Actualidad',
           'General actualidad'
         ],
-        autor: 'Kai Fu Lee',
+        autor: ['Kai Fu Lee'],
         anio: 1987,
         num_existencia: 10,
-        num_stock: 10
+        num_stock: 10,
+        img: 'portada_superpotencias-de-la-inteligencia-artificial_kai-fu-lee_201911251758.jpg'
       },
       {
         id: 10,
@@ -156,10 +159,11 @@ export class LibrosService {
           'Ciencia',
           'Evolución'
         ],
-        autor: 'Clive Finlayson',
+        autor: ['Clive Finlayson'],
         anio: 2019,
         num_existencia: 4,
-        num_stock: 4
+        num_stock: 4,
+        img: 'portada_el-sueno-del-neandertal_clive-finlayson_201911121023.jpg'
       }
     ];
   }

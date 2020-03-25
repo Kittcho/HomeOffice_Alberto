@@ -12,7 +12,7 @@
 
 @media (min-width: 992px) {
     .card-columns {
-        column-count: 6;
+        column-count: 4;
     }
 }
 
