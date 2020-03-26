@@ -2,16 +2,40 @@
     <div class="card" *ngFor="let libro of libros">
         <img [src]="libro.img | rutaImg" class="card-img-top" [alt]="libro.titulo">
         <div class="card-body">
+            <!-- Titulo -->
             <h6 class="card-title text-center">
                 Titulo:
-                <span class="badge badge-info text-wrap">{{ libro.titulo }}</span>
+                <div>
+                    <span class="badge badge-info text-wrap">{{ libro.titulo }}</span>
+                </div>
                 <hr>
             </h6>
-            <h6 class="card-subtitle text-center">
+            <!-- datos informativos de autor, genero y editorial -->
+            <!-- Autor -->
+            <h6 *ngIf="verDetallePor() == 'Titulo'" class="card-subtitle text-center">
                 Autor:
-                <span *ngFor="let autor of libro.autor" class="badge badge-pill badge-primary"> {{ autor }} </span>
+                <div>
+                    <span *ngFor="let autor of libro.autor" class="badge badge-pill badge-primary"> {{ autor }} </span>
+                </div>
                 <hr>
             </h6>
+            <!-- Genero -->
+            <h6 *ngIf="verDetallePor() == 'Genero'" class="card-subtitle text-center">
+                Genero:
+                <div>
+                    <span *ngFor="let genero of libro.genero" class="badge badge-pill badge-primary"> {{ genero }} </span>
+                </div>
+                <hr>
+            </h6>
+            <!-- Editorial -->
+            <h6 *ngIf="verDetallePor() == 'Editorial'" class="card-subtitle text-center">
+                Editorial:
+                <div>
+                    <span class="badge badge-pill badge-primary"> {{ libro.editorial }} </span>
+                </div>
+                <hr>
+            </h6>
+            <!-- Detalle de existencia y stock -->
             <div class="row align-items-center text-center">
                 <div class="col">
                     <small>

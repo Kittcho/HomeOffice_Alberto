@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LibrosService } from '../../servicios/libros.service';
+import { LibrosService, ILibro } from '../../servicios/libros.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lista-libros',
@@ -8,14 +9,13 @@ import { LibrosService } from '../../servicios/libros.service';
 })
 export class ListaLibrosComponent implements OnInit {
 
-  listaLibros: any[];
-  tipoBusqueda: string;
-  constructor( private librosServices: LibrosService ) {
+  listaLibros: ILibro[];
+
+  constructor( private librosServices: LibrosService,
+               private router: Router) {
     this.listaLibros = librosServices.getLibros();
   }
 
   ngOnInit(): void {
-    this.tipoBusqueda = 'Titulo';
   }
-
 }

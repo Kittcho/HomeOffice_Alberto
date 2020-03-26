@@ -9,6 +9,9 @@ import { LibroComponent } from './components/libro/libro.component';
 import { ListaLibrosComponent } from './components/lista-libros/lista-libros.component';
 import { ListaUsuariosComponent } from './components/lista-usuarios/lista-usuarios.component';
 import { RutaImgPipe } from './pipes/ruta-img.pipe';
+import { BuscarLibroComponent } from './components/buscar-libro/buscar-libro.component';
+import { BuscarComponent } from './components/compartido/buscar/buscar.component';
+import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RutaImgPipe } from './pipes/ruta-img.pipe';
     LibroComponent,
     ListaLibrosComponent,
     ListaUsuariosComponent,
-    RutaImgPipe
+    RutaImgPipe,
+    BuscarLibroComponent,
+    BuscarComponent,
+    PaginaNoEncontradaComponent
   ],
   imports: [
     BrowserModule,

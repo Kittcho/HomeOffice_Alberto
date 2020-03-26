@@ -1,0 +1,22 @@
+<div class="container">
+    <form>
+        <div class="form-group">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <input type="text" class="form-control" [placeholder]="'Buscar por ' + tipoBusqueda" #txtBusqueda (keyup)="BuscarLibro(txtBusqueda.value)">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputState">Tipo busqueda</label>
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" (change)="BuscarLibro( txtBusqueda.value, cbBusqueda.value )" #cbBusqueda>
+                          <option selected>Titulo</option>
+                          <option>Autor</option>
+                          <option>Genero</option>
+                          <option>Editorial</option>
+                        </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

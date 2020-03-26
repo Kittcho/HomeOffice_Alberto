@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LibrosService {
 
-  listaLibros: any[];
+  listaLibros: ILibro[];
 
   constructor() {
     this.listaLibros = [
@@ -171,4 +171,53 @@ export class LibrosService {
   getLibros() {
     return this.listaLibros;
   }
+
+  getLibrosTitulo( titulo: string ): ILibro[] {
+    return this.listaLibros.filter( libro =>  {
+      console.log({ libro });
+      console.log({ titulo });
+
+      return libro.titulo.toLowerCase().indexOf(titulo.toLowerCase()) >= 0;
+    });
+  }
+
+  getLibrosAutor( autor: string ) {
+    return this.listaLibros.filter( libro =>  {
+      return libro.autor.find( autorItem => {
+        console.log({autorItem});
+        console.log(autorItem.toLowerCase().indexOf(autor.toLowerCase()));
+        return autorItem.toLowerCase().indexOf(autor.toLowerCase()) >= 0;
+      });
+    });
+  }
+
+  getLibrosGenero( genero: string ) {
+    return this.listaLibros.filter( libro =>  {
+      return libro.genero.find( generoItem => {
+        console.log({generoItem});
+        console.log(generoItem.toLowerCase().indexOf(genero.toLowerCase()));
+        return generoItem.toLowerCase().indexOf(genero.toLowerCase()) >= 0;
+      });
+    });
+  }
+
+  getLibrosEditorial( editorial: string ) {
+    return this.listaLibros.filter( libro =>  {
+      console.log(libro.editorial);
+      console.log(libro.editorial.toLowerCase().indexOf(editorial.toLowerCase()));
+      return libro.editorial.toLowerCase().indexOf(editorial.toLowerCase()) >= 0;
+    });
+  }
+}
+
+export interface ILibro {
+  id: number;
+  titulo: string;
+  editorial: string;
+  genero: string[];
+  autor: string[];
+  anio: number;
+  num_existencia: number;
+  num_stock: number;
+  img: string;
 }
