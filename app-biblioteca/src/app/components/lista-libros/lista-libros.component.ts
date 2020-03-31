@@ -10,6 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class ListaLibrosComponent implements OnInit {
 
   listaLibros: ILibro[];
+  verPor: string;
 
   constructor( private librosServices: LibrosService,
                private router: Router) {

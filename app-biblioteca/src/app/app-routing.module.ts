@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'libros', component: ListaLibrosComponent },
   { path: 'usuarios', component: ListaUsuariosComponent },
   { path: 'buscar-libros/:tipoBusqueda/:palabra', component: BuscarLibroComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'libros' },
   { path: '**', component: PaginaNoEncontradaComponent }
 ];
 
